@@ -1,0 +1,6 @@
+Set parameter Username
+Set parameter LicenseID to value <redacted>
+Academic license - for non-commercial use only - expires 2027-01-07
+Set parameter LogFile to value "Logs/AllToAll_LP_ClosD_9-nodes_6-chunks_18-epochs_0.16666666666666666-epoch_duration_ObjectiveType.PAPER_alltoall_paper.log"
+Set parameter LogToConsole to value 0
+Schedule written to benchmarks/closd_3plus3/results/alltoall_paper.json

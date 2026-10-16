@@ -1,0 +1,32 @@
+{
+  "TopologyParams": {
+    "name": "ClosD",
+    "chassis": 2,
+    "chunk_size": 0.008333333333333333,
+    "alpha": [
+      0.0,
+      0.0
+    ]
+  },
+  "GurobiParams": {
+    "time_limit": 0.016666666666666666,
+    "output_flag": 1,
+    "feasibility_tol": 1e-07,
+    "intfeas_tol": 1e-07,
+    "optimality_tol": 1e-07,
+    "mip_gap": 0.0,
+    "log_file": "_sweep_c20_warmstart"
+  },
+  "InstanceParams": {
+    "collective": 1,
+    "num_chunks": 20,
+    "epoch_type": 1,
+    "num_epochs": 126,
+    "switch_copy": false,
+    "switch_to_gpu_link_on": true,
+    "objective_type": 2,
+    "solution_method": 1,
+    "schedule_output_file": "benchmarks/closd_3plus3/chunk_sweep_warmstart/results/c20.schedule.json",
+    "warmstart": "benchmarks/closd_3plus3/chunk_sweep_warmstart/inputs/c20.mst.gz"
+  }
+}

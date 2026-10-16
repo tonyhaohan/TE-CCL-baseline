@@ -1,0 +1,93 @@
+
+Gurobi 13.0.0 (mac64[arm]) logging started Fri Oct 16 10:53:25 2026
+
+Set parameter LogFile to value "Logs/AllGather_MILP_ClosD321_10-nodes_10-chunks_66-epochs_0.016666666666666666-epochduration_ObjectiveType.TOTAL_DEMAND_failure321_c10_warmstart.log"
+Set parameter LogToConsole to value 0
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 60
+Set parameter FeasibilityTol to value 1e-07
+Set parameter IntFeasTol to value 1e-07
+Set parameter OptimalityTol to value 1e-07
+Set parameter MIPGap to value 0
+Set parameter Crossover to value -1
+Set parameter MIPFocus to value 0
+Set parameter Method to value -1
+Set parameter Heuristics to value 0.05
+Set parameter Presolve to value -1
+Set parameter SolutionLimit to value 2000000
+Set parameter PreSOS1BigM to value 1000000
+Read MIP start from file benchmarks/closd_3plus2plus1/chunk_sweep_warmstart/inputs/c10.mst.gz
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (mac64[arm] - Darwin 27.0.0 26A434)
+
+CPU model: Apple M4
+Thread count: 10 physical cores, 10 logical processors, using up to 4 threads
+
+Non-default parameters:
+SolutionLimit  2000000
+TimeLimit  60
+FeasibilityTol  1e-07
+IntFeasTol  1e-07
+MIPGap  0
+OptimalityTol  1e-07
+LogToConsole  0
+PreSOS1BigM  1000000
+Seed  42
+Threads  4
+
+Optimize a model with 153354 rows, 232452 columns and 527766 nonzeros (Min)
+Model fingerprint: 0xe49426dd
+Model has 66 linear objective coefficients
+Model has 39666 simple general constraints
+  39666 MAX
+Variable types: 39732 continuous, 192720 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+02, 1e+02]
+  Bounds range     [1e+00, 3e+02]
+  RHS range        [1e+00, 3e+02]
+
+User MIP start produced solution with objective -900 (0.06s)
+Loaded user MIP start with objective -900
+
+Presolve removed 90011 rows and 129254 columns
+Presolve time: 0.13s
+Presolved: 63343 rows, 103198 columns, 381074 nonzeros
+Variable types: 128 continuous, 103070 integer (103070 binary)
+Performing another presolve...
+Presolve removed 22411 rows and 33574 columns
+Presolve time: 0.34s
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing primal log only...
+
+Concurrent spin time: 0.00s
+
+Solved with dual simplex
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover time: 0.22 seconds (0.40 work units)
+
+Root relaxation: objective -3.975000e+03, 15484 iterations, 0.30 seconds (0.59 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -3975.0000    0 6318 -900.00000 -3975.0000   342%     -    7s
+     0     0 -1400.0000    0 5890 -900.00000 -1400.0000  55.6%     -   45s
+     0     0 -1400.0000    0 5882 -900.00000 -1400.0000  55.6%     -   47s
+     0     0          -    0      -900.00000 -1400.0000  55.6%     -   60s
+
+Cutting planes:
+  Gomory: 14
+  Lift-and-project: 1
+  Clique: 256
+  MIR: 99
+  Zero half: 296
+  RLT: 203
+
+Explored 1 nodes (88721 simplex iterations) in 60.03 seconds (81.40 work units)
+Thread count was 4 (of 10 available processors)
+
+Solution count 2: -900 -900
+
+Time limit reached
+Best objective -9.000000000000e+02, best bound -1.400000000000e+03, gap 55.5556%

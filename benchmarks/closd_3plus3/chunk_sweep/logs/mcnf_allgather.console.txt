@@ -1,0 +1,11 @@
+Set parameter Username
+Academic license - for non-commercial use only - expires 2027-01-07
+Set parameter Method to value 2
+Set parameter Crossover to value 0
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter FeasibilityTol to value 1e-08
+Set parameter OptimalityTol to value 1e-08
+Set parameter BarConvTol to value 1e-10
+Set parameter OutputFlag to value 1
+Set parameter LogToConsole to value 0

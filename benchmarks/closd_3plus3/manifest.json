@@ -1,0 +1,142 @@
+{
+  "upstream": "microsoft/TE-CCL",
+  "fork": "tonyhaohan/TE-CCL-baseline",
+  "upstream_revision": "c128bf241e5b8bf6ce816b2fe5b8000baacb7c44",
+  "fork_branch": "codex/issue277-closd-smoke",
+  "mcnf_revision": "00c462b097a8828e40d8429ea561a3b7d491ec10",
+  "mcnf_config": {
+    "type": "closd",
+    "params": {
+      "n_groups": 2,
+      "gpus_per_node": 3,
+      "n_planes": 1,
+      "high_switches_per_plane": 1,
+      "gpu_low_bandwidth": 1.0,
+      "low_high_bandwidth": 1.0
+    }
+  },
+  "topology_equivalence": "PASS: 9 nodes, exact 16 directed edges and capacities, groups 3+3",
+  "gpu_groups": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      3,
+      4,
+      5
+    ]
+  ],
+  "switch_indices": [
+    6,
+    7,
+    8
+  ],
+  "directed_edges": [
+    [
+      0,
+      6
+    ],
+    [
+      6,
+      0
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      8,
+      6
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      7
+    ]
+  ],
+  "bandwidths": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "environment": {
+    "conda": "math",
+    "python": "3.12.8",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "cpu": "Apple M4",
+    "logical_cpus": 10,
+    "ram_bytes": 25769803776,
+    "packages": {
+      "numpy": "2.3.5",
+      "gurobipy": "13.0.0",
+      "argcomplete": "3.7.2",
+      "teccl": "1.0.0"
+    }
+  },
+  "source_sha256": {
+    "teccl/topologies/closd.py": "bd86c045334ab7544d4695f55f66a46bef8a78e575a14fa2b6af9c9d4d93abd8",
+    "teccl/scheduler.py": "18cfd9bfcac76b0249dc49647ae3388bd724761105fa496e9a592b2a9b0bdfa2",
+    "teccl/solvers/allgather.py": "4b6312171f0fcf221c4799a880ecd8b6bd38ee1777525851439dc51f274385d6",
+    "teccl/input_data.py": "2591e83139f25b70d81813cdbfc4b878385b39c2a76ebfd021ca8b075a28c890",
+    "teccl/solvers/base_formulation.py": "4240496b844a8c7f6abc86b65cdc9aca20322a6e52382f6d027a7c0fe003ccee",
+    "benchmarks/closd_3plus3/check_allgather.py": "6b5fb6bc7e5e3357becd5f9e0cc224c8475261c02b3595451ad65be03421adf9"
+  }
+}

@@ -1,0 +1,6 @@
+Set parameter Username
+Set parameter LicenseID to value <redacted>
+Academic license - for non-commercial use only - expires 2027-01-07
+Set parameter LogFile to value "Logs/AllGather_MILP_ClosD_9-nodes_2-chunks_22-epochs_0.08333333333333333-epochduration_ObjectiveType.TOTAL_DEMAND_allgather_c2_fixed.log"
+Set parameter LogToConsole to value 0
+Schedule written to benchmarks/closd_3plus3/results/allgather_c2.json

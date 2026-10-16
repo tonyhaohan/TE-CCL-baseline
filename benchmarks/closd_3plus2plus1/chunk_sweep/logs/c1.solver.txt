@@ -1,0 +1,94 @@
+
+Gurobi 13.0.0 (mac64[arm]) logging started Fri Oct 16 00:14:34 2026
+
+Set parameter LogFile to value "Logs/AllGather_MILP_ClosD321_10-nodes_1-chunks_12-epochs_0.16666666666666666-epochduration_ObjectiveType.TOTAL_DEMAND_failure321_c1.log"
+Set parameter LogToConsole to value 0
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 60
+Set parameter FeasibilityTol to value 1e-07
+Set parameter IntFeasTol to value 1e-07
+Set parameter OptimalityTol to value 1e-07
+Set parameter MIPGap to value 0
+Set parameter Crossover to value -1
+Set parameter MIPFocus to value 0
+Set parameter Method to value -1
+Set parameter Heuristics to value 0.05
+Set parameter Presolve to value -1
+Set parameter SolutionLimit to value 2000000
+Set parameter PreSOS1BigM to value 1000000
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (mac64[arm] - Darwin 27.0.0 26A434)
+
+CPU model: Apple M4
+Thread count: 10 physical cores, 10 logical processors, using up to 4 threads
+
+Non-default parameters:
+SolutionLimit  2000000
+TimeLimit  60
+FeasibilityTol  1e-07
+IntFeasTol  1e-07
+MIPGap  0
+OptimalityTol  1e-07
+LogToConsole  0
+PreSOS1BigM  1000000
+Seed  42
+Threads  4
+
+Optimize a model with 3018 rows, 4248 columns and 9474 nonzeros (Min)
+Model fingerprint: 0x927ce655
+Model has 12 linear objective coefficients
+Model has 732 simple general constraints
+  732 MAX
+Variable types: 744 continuous, 3504 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+02, 1e+02]
+  Bounds range     [1e+00, 3e+01]
+  RHS range        [1e+00, 3e+01]
+Presolve removed 2312 rows and 3318 columns
+Presolve time: 0.01s
+Presolved: 706 rows, 930 columns, 3393 nonzeros
+Variable types: 14 continuous, 916 integer (915 binary)
+
+Root relaxation: objective -6.933333e+02, 880 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -693.33333    0   86          - -693.33333      -     -    0s
+H    0     0                    -300.0000000 -693.33333   131%     -    0s
+     0     0 -500.00000    0  183 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0  162 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0  162 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0  135 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0   40 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0   60 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0   40 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0   40 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0   63 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0   80 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0   78 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0   75 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0  130 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0   43 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0   58 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0  126 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0  102 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0  102 -300.00000 -500.00000  66.7%     -    0s
+     0     0 -500.00000    0  102 -300.00000 -500.00000  66.7%     -    0s
+     0     2 -500.00000    0  101 -300.00000 -500.00000  66.7%     -    0s
+*   47    40               7    -400.0000000 -490.90909  22.7%  50.8    0s
+
+Cutting planes:
+  Clique: 14
+  MIR: 4
+  Inf proof: 1
+  Zero half: 14
+
+Explored 111 nodes (7697 simplex iterations) in 0.18 seconds (0.28 work units)
+Thread count was 4 (of 10 available processors)
+
+Solution count 2: -400 -300
+No other solutions better than -400
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective -4.000000000000e+02, best bound -4.000000000000e+02, gap 0.0000%

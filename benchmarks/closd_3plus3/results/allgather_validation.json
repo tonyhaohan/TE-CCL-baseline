@@ -1,0 +1,20 @@
+{
+  "allgather_c1": {
+    "verified_demands": 30,
+    "physical_sends": 80,
+    "epochs": 8,
+    "modeled_finish_time": 1.3333333333333333,
+    "output_GB_per_GPU": 1.0,
+    "corrected_algorithm_bandwidth_GBps": 0.75,
+    "upstream_export_rejected": true
+  },
+  "allgather_c2": {
+    "verified_demands": 60,
+    "physical_sends": 148,
+    "epochs": 12,
+    "modeled_finish_time": 1.0,
+    "output_GB_per_GPU": 1.0,
+    "corrected_algorithm_bandwidth_GBps": 1.0,
+    "upstream_export_rejected": true
+  }
+}

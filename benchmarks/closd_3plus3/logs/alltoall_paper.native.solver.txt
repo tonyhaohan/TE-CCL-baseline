@@ -1,0 +1,65 @@
+
+Gurobi 13.0.0 (mac64[arm]) logging started Thu Oct 15 18:52:00 2026
+
+Set parameter LogFile to value "Logs/AllToAll_LP_ClosD_9-nodes_6-chunks_18-epochs_0.16666666666666666-epoch_duration_ObjectiveType.PAPER_alltoall_paper.log"
+Set parameter LogToConsole to value 0
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 60
+Set parameter FeasibilityTol to value 1e-07
+Set parameter IntFeasTol to value 1e-07
+Set parameter OptimalityTol to value 1e-07
+Set parameter MIPGap to value 0
+Set parameter Crossover to value -1
+Set parameter MIPFocus to value 0
+Set parameter Method to value -1
+Set parameter Heuristics to value 0.05
+Set parameter Presolve to value -1
+Set parameter SolutionLimit to value 2000000
+Set parameter PreSOS1BigM to value 1000000
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (mac64[arm] - Darwin 27.0.0 26A434)
+
+CPU model: Apple M4
+Thread count: 10 physical cores, 10 logical processors, using up to 10 threads
+
+Non-default parameters:
+SolutionLimit  2000000
+TimeLimit  60
+FeasibilityTol  1e-07
+IntFeasTol  1e-07
+MIPGap  0
+OptimalityTol  1e-07
+LogToConsole  0
+PreSOS1BigM  1000000
+
+Optimize a model with 5205 rows, 17496 columns and 18202 nonzeros (Min)
+Model fingerprint: 0xde346ee1
+Model has 4050 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e-01, 1e+01]
+  Bounds range     [1e+00, 3e+01]
+  RHS range        [1e+00, 5e+00]
+Presolve removed 4059 rows and 15150 columns
+Presolve time: 0.00s
+Presolved: 1146 rows, 2346 columns, 6372 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0   -5.9474295e+02   3.000000e+01   0.000000e+00      0s
+     381   -4.1032326e+02   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+      50 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 2.8754776e-14      0s
+
+Crossover time: 0.00 seconds (0.00 work units)
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     458   -4.1032326e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 458 iterations and 0.01 seconds (0.02 work units)
+Optimal objective -4.103232642e+02

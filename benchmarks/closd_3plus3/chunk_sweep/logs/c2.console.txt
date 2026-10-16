@@ -1,0 +1,6 @@
+Set parameter Username
+Academic license - for non-commercial use only - expires 2027-01-07
+Set parameter Threads to value 4
+Set parameter Seed to value 42
+Set parameter LogFile to value "Logs/AllGather_MILP_ClosD_9-nodes_2-chunks_18-epochs_0.08333333333333333-epochduration_ObjectiveType.TOTAL_DEMAND_sweep_c2.log"
+Set parameter LogToConsole to value 0

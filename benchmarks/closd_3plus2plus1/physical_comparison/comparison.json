@@ -1,0 +1,530 @@
+{
+  "contract": {
+    "vector_bytes_per_gpu": 250000,
+    "link_Gbps": 400,
+    "startup_us_per_active_step": 0.1,
+    "full_vector_transport_us": 5.0,
+    "allgather_initial_bytes_per_gpu": 41666.666666666664,
+    "allgather_chunk_bytes": "250000/(6*c)",
+    "allreduce": "2 * complete AllGather time",
+    "time_formula_us": "epochs * 5/(6*c) + 0.1 * active_epochs",
+    "method": "new failure-topology MILP solves plus physical replay of the resulting schedules",
+    "synthesis_timing": "measured on the new 3+2+1 normalized but combinatorially identical models; one cold run per case and one c10 retry",
+    "mcnf_reference": "T=12 main-only fixed schedule evaluation; no startup reoptimization"
+  },
+  "teccl": [
+    {
+      "chunks_per_source": 1,
+      "total_distinct_chunks": 6,
+      "chunk_bytes": 41666.666666666664,
+      "source_initial_bytes": 41666.666666666664,
+      "output_bytes_per_gpu": 250000,
+      "physical_link_Gbps": 400,
+      "epoch_transport_us": 0.8333333333333334,
+      "completion_epochs": 9,
+      "active_epochs": 9,
+      "transport_us": 7.5,
+      "startup_us": 0.9,
+      "allgather_us": 8.4,
+      "allreduce_estimate_us": 16.8,
+      "selected_status": "OPTIMAL",
+      "selected_origin": "chunk_sweep",
+      "cold_status": "OPTIMAL",
+      "cold_solution_count": 2,
+      "cold_synthesis_or_stopped_wall_sec": 0.22625791700556874,
+      "cold_optimizer_sec": 0.17838287353515625,
+      "warm_synthesis_wall_sec": null,
+      "warm_seed_build_sec": null,
+      "warm_optimizer_sec": null,
+      "selected_native_mip_gap": 0.0,
+      "num_variables": 4248,
+      "peak_rss_mib": 73.953125,
+      "validated": true,
+      "validation": {
+        "verified_demands": 30,
+        "physical_sends": 92,
+        "epochs": 9,
+        "modeled_finish_time": 1.5,
+        "output_GB_per_GPU": 1.0,
+        "corrected_algorithm_bandwidth_GBps": 0.6666666666666666
+      },
+      "schedule": "benchmarks/closd_3plus2plus1/chunk_sweep/results/c1.schedule.json",
+      "mcnf_allreduce_less_time_percent": 43.253968253914465
+    },
+    {
+      "chunks_per_source": 2,
+      "total_distinct_chunks": 12,
+      "chunk_bytes": 20833.333333333332,
+      "source_initial_bytes": 41666.666666666664,
+      "output_bytes_per_gpu": 250000,
+      "physical_link_Gbps": 400,
+      "epoch_transport_us": 0.4166666666666667,
+      "completion_epochs": 13,
+      "active_epochs": 13,
+      "transport_us": 5.416666666666667,
+      "startup_us": 1.3,
+      "allgather_us": 6.716666666666667,
+      "allreduce_estimate_us": 13.433333333333334,
+      "selected_status": "OPTIMAL",
+      "selected_origin": "chunk_sweep",
+      "cold_status": "OPTIMAL",
+      "cold_solution_count": 5,
+      "cold_synthesis_or_stopped_wall_sec": 1.5711638329958078,
+      "cold_optimizer_sec": 1.444507122039795,
+      "warm_synthesis_wall_sec": null,
+      "warm_seed_build_sec": null,
+      "warm_optimizer_sec": null,
+      "selected_native_mip_gap": 0.0,
+      "num_variables": 12708,
+      "peak_rss_mib": 144.484375,
+      "validated": true,
+      "validation": {
+        "verified_demands": 60,
+        "physical_sends": 174,
+        "epochs": 13,
+        "modeled_finish_time": 1.0833333333333333,
+        "output_GB_per_GPU": 1.0,
+        "corrected_algorithm_bandwidth_GBps": 0.9230769230769231
+      },
+      "schedule": "benchmarks/closd_3plus2plus1/chunk_sweep/results/c2.schedule.json",
+      "mcnf_allreduce_less_time_percent": 29.032258064448868
+    },
+    {
+      "chunks_per_source": 3,
+      "total_distinct_chunks": 18,
+      "chunk_bytes": 13888.888888888889,
+      "source_initial_bytes": 41666.666666666664,
+      "output_bytes_per_gpu": 250000,
+      "physical_link_Gbps": 400,
+      "epoch_transport_us": 0.27777777777777773,
+      "completion_epochs": 18,
+      "active_epochs": 18,
+      "transport_us": 4.999999999999999,
+      "startup_us": 1.8,
+      "allgather_us": 6.799999999999999,
+      "allreduce_estimate_us": 13.599999999999998,
+      "selected_status": "OPTIMAL",
+      "selected_origin": "chunk_sweep",
+      "cold_status": "OPTIMAL",
+      "cold_solution_count": 6,
+      "cold_synthesis_or_stopped_wall_sec": 7.5839419169933535,
+      "cold_optimizer_sec": 7.339421987533569,
+      "warm_synthesis_wall_sec": null,
+      "warm_seed_build_sec": null,
+      "warm_optimizer_sec": null,
+      "selected_native_mip_gap": 0.0,
+      "num_variables": 25392,
+      "peak_rss_mib": 313.40625,
+      "validated": true,
+      "validation": {
+        "verified_demands": 90,
+        "physical_sends": 260,
+        "epochs": 18,
+        "modeled_finish_time": 1.0,
+        "output_GB_per_GPU": 1.0,
+        "corrected_algorithm_bandwidth_GBps": 1.0
+      },
+      "schedule": "benchmarks/closd_3plus2plus1/chunk_sweep/results/c3.schedule.json",
+      "mcnf_allreduce_less_time_percent": 29.901960784247272
+    },
+    {
+      "chunks_per_source": 5,
+      "total_distinct_chunks": 30,
+      "chunk_bytes": 8333.333333333334,
+      "source_initial_bytes": 41666.66666666667,
+      "output_bytes_per_gpu": 250000,
+      "physical_link_Gbps": 400,
+      "epoch_transport_us": 0.16666666666666669,
+      "completion_epochs": 29,
+      "active_epochs": 29,
+      "transport_us": 4.833333333333334,
+      "startup_us": 2.9000000000000004,
+      "allgather_us": 7.733333333333334,
+      "allreduce_estimate_us": 15.466666666666669,
+      "selected_status": "TIME_LIMIT",
+      "selected_origin": "chunk_sweep",
+      "cold_status": "TIME_LIMIT",
+      "cold_solution_count": 5,
+      "cold_synthesis_or_stopped_wall_sec": 60.69650241697673,
+      "cold_optimizer_sec": 60.00784397125244,
+      "warm_synthesis_wall_sec": null,
+      "warm_seed_build_sec": null,
+      "warm_optimizer_sec": null,
+      "selected_native_mip_gap": 0.125,
+      "num_variables": 63432,
+      "peak_rss_mib": 876.296875,
+      "validated": true,
+      "validation": {
+        "verified_demands": 150,
+        "physical_sends": 438,
+        "epochs": 29,
+        "modeled_finish_time": 0.9666666666666667,
+        "output_GB_per_GPU": 1.0,
+        "corrected_algorithm_bandwidth_GBps": 1.0344827586206897
+      },
+      "schedule": "benchmarks/closd_3plus2plus1/chunk_sweep/results/c5.schedule.json",
+      "mcnf_allreduce_less_time_percent": 38.36206896545883
+    },
+    {
+      "chunks_per_source": 10,
+      "total_distinct_chunks": 60,
+      "chunk_bytes": 4166.666666666667,
+      "source_initial_bytes": 41666.66666666667,
+      "output_bytes_per_gpu": 250000,
+      "physical_link_Gbps": 400,
+      "epoch_transport_us": 0.08333333333333334,
+      "completion_epochs": 58,
+      "active_epochs": 58,
+      "transport_us": 4.833333333333334,
+      "startup_us": 5.800000000000001,
+      "allgather_us": 10.633333333333335,
+      "allreduce_estimate_us": 21.26666666666667,
+      "selected_status": "TIME_LIMIT",
+      "selected_origin": "chunk_sweep_warmstart",
+      "cold_status": "TIME_LIMIT",
+      "cold_solution_count": 0,
+      "cold_synthesis_or_stopped_wall_sec": 61.53478083398659,
+      "cold_optimizer_sec": 60.09060502052307,
+      "warm_synthesis_wall_sec": 62.48843270899988,
+      "warm_seed_build_sec": 0.1110526249999566,
+      "warm_optimizer_sec": 60.02774095535278,
+      "selected_native_mip_gap": 0.5555555555555556,
+      "num_variables": 232452,
+      "peak_rss_mib": 2070.65625,
+      "validated": true,
+      "validation": {
+        "verified_demands": 300,
+        "physical_sends": 876,
+        "epochs": 58,
+        "modeled_finish_time": 0.9666666666666667,
+        "output_GB_per_GPU": 1.0,
+        "corrected_algorithm_bandwidth_GBps": 1.0344827586206897
+      },
+      "schedule": "benchmarks/closd_3plus2plus1/chunk_sweep_warmstart/results/c10.schedule.json",
+      "mcnf_allreduce_less_time_percent": 55.17241379306097
+    }
+  ],
+  "mcnf": [
+    {
+      "collective": "allgather",
+      "normalized_volume": 1.0,
+      "time_steps": 12,
+      "active_steps": 12,
+      "transport_us": 4.479166666754929,
+      "startup_us": 1.2000000000000002,
+      "physical_time_us": 5.679166666754929,
+      "synthesis_wall_sec": 0.08060120799927972,
+      "optimizer_sec": 0.023445844650268555,
+      "status": "optimal",
+      "validated": true,
+      "constraint_violations": {
+        "eq": 5.884008558165732e-14,
+        "ineq": 1.0883026251018446e-13,
+        "lower_bounds": 1.1909059748563873e-14,
+        "upper_bounds": 0.0
+      },
+      "artifact": "benchmarks/closd_3plus2plus1/chunk_sweep/mcnf_artifacts/codex_issue277-teccl-closd/20261016_001648_453790_issue277_failure321_allgather_t12_00c462b0"
+    },
+    {
+      "collective": "allreduce",
+      "normalized_volume": 1.0,
+      "time_steps": 12,
+      "active_steps": 12,
+      "transport_us": 8.33333333334237,
+      "startup_us": 1.2000000000000002,
+      "physical_time_us": 9.53333333334237,
+      "synthesis_wall_sec": 0.154346124996664,
+      "optimizer_sec": 0.0714409351348877,
+      "status": "optimal",
+      "validated": true,
+      "constraint_violations": {
+        "eq": 9.529044220357719e-13,
+        "ineq": 1.0247844239863468e-12,
+        "lower_bounds": 0.0,
+        "upper_bounds": 0.0
+      },
+      "artifact": "benchmarks/closd_3plus2plus1/chunk_sweep/mcnf_artifacts/codex_issue277-teccl-closd/20261016_001648_826575_issue277_failure321_allreduce_t12_00c462b0"
+    }
+  ],
+  "validation_wall_sec": 0.0374666249999791,
+  "source": {
+    "upstream": "microsoft/TE-CCL",
+    "fork": "tonyhaohan/TE-CCL-baseline",
+    "upstream_revision": "c128bf241e5b8bf6ce816b2fe5b8000baacb7c44",
+    "fork_branch": "codex/issue277-closd-smoke",
+    "mcnf_revision": "00c462b097a8828e40d8429ea561a3b7d491ec10",
+    "environment": {
+      "conda": "math",
+      "python": "3.12.8",
+      "platform": "macOS-27.0.1-arm64-arm-64bit",
+      "cpu": "Apple M4",
+      "logical_cpus": 10,
+      "ram_bytes": 25769803776,
+      "packages": {
+        "numpy": "2.3.5",
+        "gurobipy": "13.0.0",
+        "argcomplete": "3.7.2",
+        "teccl": "1.0.0"
+      }
+    },
+    "failure_events": [
+      {
+        "primary_node": 1,
+        "failed_gpu": 5,
+        "spare_node": 0,
+        "spare_gpu": 6
+      }
+    ],
+    "canonical_mcnf_config": {
+      "type": "closd",
+      "params": {
+        "gpu_groups": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6
+          ]
+        ],
+        "logical_gpu_groups": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            6
+          ]
+        ],
+        "gpus_per_node": 3,
+        "n_planes": 1,
+        "high_switches_per_plane": 1,
+        "gpu_low_bandwidth": 1.0,
+        "low_high_bandwidth": 1.0,
+        "scale_low_high_by_group_size": false
+      }
+    },
+    "mcnf_config": {
+      "type": "closd",
+      "params": {
+        "gpu_groups": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5
+          ]
+        ],
+        "logical_gpu_groups": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ]
+        ],
+        "gpus_per_node": 3,
+        "n_planes": 1,
+        "high_switches_per_plane": 1,
+        "gpu_low_bandwidth": 1.0,
+        "low_high_bandwidth": 1.0,
+        "scale_low_high_by_group_size": false
+      }
+    },
+    "node_mapping": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "6": 5,
+      "7": 6,
+      "8": 7,
+      "9": 8,
+      "10": 9
+    },
+    "physical_gpu_groups": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5
+      ]
+    ],
+    "logical_gpu_groups": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "directed_edges": [
+      [
+        0,
+        6
+      ],
+      [
+        6,
+        0
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        7,
+        4
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        8,
+        5
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        8
+      ]
+    ],
+    "bandwidths": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "switch_indices": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "topology_equivalence": "PASS: canonical failure graph relabeling, exact 18 directed edges/capacities and physical/logical groups",
+    "source_sha256": {
+      "teccl/topologies/closd321.py": "19354170860a40077e0d96e35f4fbf6693aa2bcd35d2e1bcab59bb6e6fa425d4",
+      "teccl/scheduler.py": "2d0b46fcfaba3adbf18129f4d6e39cb76569d8219ccebeb43cbe221a521c2b11",
+      "teccl/solvers/allgather.py": "4b6312171f0fcf221c4799a880ecd8b6bd38ee1777525851439dc51f274385d6",
+      "teccl/input_data.py": "2591e83139f25b70d81813cdbfc4b878385b39c2a76ebfd021ca8b075a28c890",
+      "teccl/solvers/base_formulation.py": "4240496b844a8c7f6abc86b65cdc9aca20322a6e52382f6d027a7c0fe003ccee",
+      "benchmarks/closd_3plus2plus1/run_comparison.py": "5d6f1c441322859d290645553941dec9bca9ae2a67cf3c48c3b96ba0531b3f0c",
+      "benchmarks/closd_3plus2plus1/check_allgather.py": "c25fc68312b52fd9e97be441442555b333d575bef99ecd3e81d1fcb4caaa7906",
+      "benchmarks/closd_3plus3/run_comparison.py": "fe1dc09cbc30e4508a468acf42cbffbf014d88a8e3ea22b3635876e0eed214d2"
+    }
+  },
+  "source_sha256": {
+    "benchmarks/closd_3plus2plus1/check_allgather.py": "c25fc68312b52fd9e97be441442555b333d575bef99ecd3e81d1fcb4caaa7906",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/inputs/c1.json": "f5fcaa5d28ce321a9d6800b4353d4cbf333a5ec7113f71154c351ded33998e65",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/inputs/c2.json": "47098e5a2584214a998ab18850cd9647f7a04ad72b367a9de6b25090b53083f8",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/inputs/c3.json": "cdad753145ba9fa91fb059e7d51416e20bb88ed1d0873654d5a4d6dc42a5f869",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/inputs/c5.json": "ff0cc59ca432aa5d787755e699a2985818ed78f8db4fabdd94c8b130e6f1a1bc",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/mcnf_artifacts/codex_issue277-teccl-closd/20261016_001648_453790_issue277_failure321_allgather_t12_00c462b0/run_manifest.json": "9564ed8ac4402a1327450394d908a5a22ca1e98edf79dcc50e24bd6548b16d4f",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/mcnf_artifacts/codex_issue277-teccl-closd/20261016_001648_453790_issue277_failure321_allgather_t12_00c462b0/solution.npz": "6c3c98040e481bc7ae0e5c5d0518d0e06da00905380751a73cca2755d4e42b09",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/mcnf_artifacts/codex_issue277-teccl-closd/20261016_001648_826575_issue277_failure321_allreduce_t12_00c462b0/run_manifest.json": "3f4db9e892796eb8be0a09eb8d38fd4c41806179cae613e843672d46dc6e1618",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/mcnf_artifacts/codex_issue277-teccl-closd/20261016_001648_826575_issue277_failure321_allreduce_t12_00c462b0/solution.npz": "041062f02bddead8be5376e7512c8d3708f5dafdcd5484cef6f41839b70161c9",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/results/c1.metrics.json": "98264039f10f4e2c0347c6da36de05d324bd67324e1a96ba355e2903aa9e9a7f",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/results/c1.schedule.json": "befc898ffd224ca4a2eced666ff8b9da58d3a2dd400e890f560471712d6bf9bd",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/results/c10.metrics.json": "e225921ce954f9c003b76efa539e2364e148ad454ec2268f5206ea9db4b278f5",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/results/c2.metrics.json": "e67721e29a914bd5b63d9bbcfdcd23ac610359e17b62bf2cd5580dbf209d9b3c",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/results/c2.schedule.json": "49ddc1ef4b17ce89adb9eed8e49ccf9d231d395974859851d01242e9f0f99d6a",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/results/c3.metrics.json": "89260b77898bd343cb963e469fd23ffe53fa52258440769bcda7e57ec3601286",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/results/c3.schedule.json": "fa02317c175e5ec9f7622851108e124f8fd482977e72ea47b8c4d5e1201ee38a",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/results/c5.metrics.json": "3089c14f452f5b369543ac1b0cca307c9f23d6a957649443b7b76d193ace946e",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/results/c5.schedule.json": "027db6cbd15c9ad6c0397fefa4ee6eb69ede7aa93fbcfd9dee3898aa31d02d8f",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/results/mcnf_allgather.metrics.json": "c971cbf74cf988760feb001beb20e66ff46782bc9c4f15f546a8581d0ee54843",
+    "benchmarks/closd_3plus2plus1/chunk_sweep/results/mcnf_allreduce.metrics.json": "4f4ac31219bd70d0295b23e9b80cdd567da4edaf281d2a875a09a451cfa19cdb",
+    "benchmarks/closd_3plus2plus1/chunk_sweep_warmstart/inputs/c10.json": "726809f5ada84214b6eb442775b3ac7b56057a734eebc3612dbb5cba51663dc6",
+    "benchmarks/closd_3plus2plus1/chunk_sweep_warmstart/results/c10.metrics.json": "6d0d49b60144408c04fd011a1dcdc970caae610516c07a5a9a98c5d5d721ce5d",
+    "benchmarks/closd_3plus2plus1/chunk_sweep_warmstart/results/c10.schedule.json": "1bd2102370c119f20dcb4a4f74e35e7a23ab6c4072bd1545146f4f2323a4092b",
+    "benchmarks/closd_3plus2plus1/evaluate_physical.py": "541a15a29916ad2b0af8495acbe36fbfc37f56d8bf694ab2863add21402c6461",
+    "benchmarks/closd_3plus2plus1/manifest.json": "b649e0d77ccc8d4761c7aff3bed6ef1cd64d55e96d4f3ddda91b4fcc2ba2a501",
+    "benchmarks/closd_3plus2plus1/run_comparison.py": "5d6f1c441322859d290645553941dec9bca9ae2a67cf3c48c3b96ba0531b3f0c"
+  }
+}

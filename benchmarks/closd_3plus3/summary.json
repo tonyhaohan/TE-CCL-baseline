@@ -1,0 +1,57 @@
+{
+  "unit_convention": "1 GB/s per directed link, alpha=0; modeled time seconds under this normalization",
+  "rows": [
+    {
+      "case": "allgather_c1",
+      "collective": "AllGather",
+      "status": "OPTIMAL",
+      "num_chunks_per_source": 1,
+      "chunk_size_GB": 0.16666666666666666,
+      "initial_GB_per_GPU": 0.16666666666666666,
+      "output_GB_per_GPU": 1.0,
+      "epoch_duration": 0.16666666666666666,
+      "epochs": 8,
+      "allgather_modeled_time": 1.3333333333333333,
+      "allreduce_estimated_time": 2.6666666666666665,
+      "allreduce_estimate_rule": "2 * AllGather time, requested by user; no ReduceScatter or AllReduce solve",
+      "synthesis_wall_sec": 0.06925702095031738,
+      "validation": {
+        "verified_demands": 30,
+        "physical_sends": 80,
+        "epochs": 8,
+        "modeled_finish_time": 1.3333333333333333,
+        "output_GB_per_GPU": 1.0,
+        "corrected_algorithm_bandwidth_GBps": 0.75,
+        "upstream_export_rejected": true
+      },
+      "input": "benchmarks/closd_3plus3/inputs/allgather_c1.json",
+      "schedule": "benchmarks/closd_3plus3/results/allgather_c1.json"
+    },
+    {
+      "case": "allgather_c2",
+      "collective": "AllGather",
+      "status": "OPTIMAL",
+      "num_chunks_per_source": 2,
+      "chunk_size_GB": 0.08333333333333333,
+      "initial_GB_per_GPU": 0.16666666666666666,
+      "output_GB_per_GPU": 1.0,
+      "epoch_duration": 0.08333333333333333,
+      "epochs": 12,
+      "allgather_modeled_time": 1.0,
+      "allreduce_estimated_time": 2.0,
+      "allreduce_estimate_rule": "2 * AllGather time, requested by user; no ReduceScatter or AllReduce solve",
+      "synthesis_wall_sec": 0.6772501468658447,
+      "validation": {
+        "verified_demands": 60,
+        "physical_sends": 148,
+        "epochs": 12,
+        "modeled_finish_time": 1.0,
+        "output_GB_per_GPU": 1.0,
+        "corrected_algorithm_bandwidth_GBps": 1.0,
+        "upstream_export_rejected": true
+      },
+      "input": "benchmarks/closd_3plus3/inputs/allgather_c2.json",
+      "schedule": "benchmarks/closd_3plus3/results/allgather_c2.json"
+    }
+  ]
+}

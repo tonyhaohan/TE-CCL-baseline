@@ -1,0 +1,193 @@
+{
+  "artifact_id": "20261015_234405_515358_issue277_allreduce_t12_00c462b0",
+  "artifact_root": "benchmarks/closd_3plus3/chunk_sweep/mcnf_artifacts",
+  "artifact_storage": "primary",
+  "config": {
+    "comm": {
+      "name": "hwc"
+    },
+    "crossover": {
+      "method": "none"
+    },
+    "modeling": {
+      "family": "node_arc",
+      "params": {
+        "beta": 1.0,
+        "time_steps": 12
+      }
+    },
+    "network": {
+      "params": {
+        "gpu_low_bandwidth": 1.0,
+        "gpus_per_node": 3,
+        "high_switches_per_plane": 1,
+        "low_high_bandwidth": 1.0,
+        "n_groups": 2,
+        "n_planes": 1
+      },
+      "type": "closd"
+    },
+    "pareto": {
+      "method": "none"
+    },
+    "presolve": {
+      "name": "none"
+    },
+    "run": {
+      "artifact": true,
+      "artifact_dir": "benchmarks/closd_3plus3/chunk_sweep/mcnf_artifacts",
+      "artifact_fallback_dir": "benchmarks/closd_3plus3/chunk_sweep/mcnf_artifacts",
+      "artifact_id": "20261015_234405_515358_issue277_allreduce_t12_00c462b0",
+      "artifact_include_z": true,
+      "name": "issue277_allreduce_t12",
+      "save": false,
+      "solver_log": true,
+      "solver_log_dir": "benchmarks/closd_3plus3/chunk_sweep/logs/mcnf",
+      "solver_log_to_console": false
+    },
+    "solver": {
+      "name": "gurobi_native",
+      "solver_args": {
+        "BarConvTol": 1e-10,
+        "Crossover": 0,
+        "FeasibilityTol": 1e-08,
+        "Method": 2,
+        "OptimalityTol": 1e-08,
+        "Threads": 4,
+        "TimeLimit": 60
+      }
+    },
+    "solver_backend": {},
+    "squeeze": {
+      "method": "none"
+    },
+    "stages": {
+      "crossover": {
+        "backend": {
+          "name": "gurobi_native",
+          "solver_args": {
+            "BarConvTol": 1e-10,
+            "Crossover": 0,
+            "FeasibilityTol": 1e-08,
+            "Method": 2,
+            "OptimalityTol": 1e-08,
+            "Threads": 4,
+            "TimeLimit": 60
+          }
+        },
+        "presolve": {
+          "name": "none"
+        }
+      },
+      "main": {
+        "backend": {
+          "name": "gurobi_native",
+          "solver_args": {
+            "BarConvTol": 1e-10,
+            "Crossover": 0,
+            "FeasibilityTol": 1e-08,
+            "Method": 2,
+            "OptimalityTol": 1e-08,
+            "Threads": 4,
+            "TimeLimit": 60
+          }
+        },
+        "presolve": {
+          "name": "none"
+        }
+      },
+      "pareto": {
+        "backend": {
+          "name": "gurobi_native",
+          "solver_args": {
+            "BarConvTol": 1e-10,
+            "Crossover": 0,
+            "FeasibilityTol": 1e-08,
+            "Method": 2,
+            "OptimalityTol": 1e-08,
+            "Threads": 4,
+            "TimeLimit": 60
+          }
+        },
+        "presolve": {
+          "name": "none"
+        }
+      },
+      "squeeze": {
+        "backend": {
+          "name": "gurobi_native",
+          "solver_args": {
+            "BarConvTol": 1e-10,
+            "Crossover": 0,
+            "FeasibilityTol": 1e-08,
+            "Method": 2,
+            "OptimalityTol": 1e-08,
+            "Threads": 4,
+            "TimeLimit": 60
+          }
+        },
+        "presolve": {
+          "name": "none"
+        }
+      }
+    },
+    "task": {
+      "params": {
+        "data_volume": 0.16666666666666666,
+        "group_size": 6
+      },
+      "type": "allreduce"
+    }
+  },
+  "config_file": null,
+  "created_at": "2026-10-15T23:44:05+08:00",
+  "fallback_reason": null,
+  "generation_rng": "numpy.default_rng",
+  "git_branch": "codex_issue277-teccl-closd",
+  "git_commit": "00c462b097a8828e40d8429ea561a3b7d491ec10",
+  "hostname": "MacBook-Air-M4.local",
+  "include_stage_z": false,
+  "include_z": true,
+  "npz": "solution.npz",
+  "overrides": [],
+  "schema": "mcnf_tree.artifact.v1",
+  "script": null,
+  "solution": {
+    "backend": "gurobi_native",
+    "objective": 1.6666666666726755,
+    "solve_time": 0.06529462500475347,
+    "solver_stats": {
+      "build_time": 0.019621584011474624,
+      "gpu_memory_mb_peak": null,
+      "gpu_memory_monitor_enabled": true,
+      "gpu_memory_sample_count": 0,
+      "gurobi_bar_iter_count": 7,
+      "gurobi_iter_count": 0.0,
+      "gurobi_max_mem_used_gb": 0.016456976,
+      "gurobi_native_overhead_time": 0.013621689518913627,
+      "gurobi_native_wall_time": 0.06529462500475347,
+      "gurobi_num_constrs": 8917,
+      "gurobi_num_nz": 31110,
+      "gurobi_num_vars": 8358,
+      "gurobi_pdhg_iter_count": 0.0,
+      "gurobi_sol_count": 1,
+      "gurobi_status_code": 2,
+      "gurobi_work": 0.10968426153048044,
+      "objective_l2_norm": 3.4641016151377544,
+      "presolved_columns": 3730,
+      "presolved_nnz": 32258,
+      "presolved_norm_probe_time_sec": 0.013971582986414433,
+      "presolved_objective_l2_norm": 3.4641016151377544,
+      "presolved_rhs_l2_norm": 1.4142135623730951,
+      "presolved_rows": 3456,
+      "rhs_l2_norm": 1.0,
+      "setup_time": 0.009972041996661574,
+      "solve_time": 0.051672935485839844
+    },
+    "status": "optimal",
+    "time_steps": 12,
+    "total_variables": 8358
+  },
+  "stage_artifacts": [],
+  "title": "issue277_allreduce_t12"
+}

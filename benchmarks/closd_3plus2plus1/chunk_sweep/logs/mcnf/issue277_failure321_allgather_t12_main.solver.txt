@@ -1,0 +1,53 @@
+
+Gurobi 13.0.0 (mac64[arm]) logging started Fri Oct 16 00:16:48 2026
+
+Set parameter LogFile to value "benchmarks/closd_3plus2plus1/chunk_sweep/logs/mcnf/issue277_failure321_allgather_t12_main.log"
+Set parameter OutputFlag to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (mac64[arm] - Darwin 27.0.0 26A434)
+
+CPU model: Apple M4
+Thread count: 10 physical cores, 10 logical processors, using up to 4 threads
+
+Non-default parameters:
+TimeLimit  60
+FeasibilityTol  1e-08
+OptimalityTol  1e-08
+Method  2
+BarConvTol  1e-10
+Crossover  0
+LogToConsole  0
+Threads  4
+
+Optimize a model with 4512 rows, 4182 columns and 16068 nonzeros (Min)
+Model fingerprint: 0x82e8a545
+Model has 12 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e-01, 2e-01]
+Presolve removed 3126 rows and 2442 columns
+Presolve time: 0.00s
+Presolved: 1386 rows, 1740 columns, 12894 nonzeros
+Ordering time: 0.01s
+
+Barrier statistics:
+ AA' NZ     : 3.860e+04
+ Factor NZ  : 1.186e+05 (roughly 2 MB of memory)
+ Factor Ops : 1.249e+07 (less than 1 second per iteration)
+ Threads    : 4
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   2.45629217e+00  0.00000000e+00  4.54e+00 0.00e+00  1.49e-02     0s
+   1   1.70472299e+00 -4.84680983e-01  1.04e+00 2.31e-02  3.70e-03     0s
+   2   1.04874296e+00 -8.03108706e-02  1.64e-01 2.22e-16  7.18e-04     0s
+   3   9.56435146e-01  5.39869412e-01  1.95e-02 2.22e-16  1.67e-04     0s
+   4   9.16920181e-01  8.27759984e-01  5.14e-04 3.33e-16  3.06e-05     0s
+   5   9.03842130e-01  8.76093022e-01  9.12e-05 3.33e-16  9.48e-06     0s
+   6   8.97626256e-01  8.92046801e-01  1.97e-05 3.33e-16  1.91e-06     0s
+   7   8.95847248e-01  8.95811705e-01  1.22e-07 3.33e-16  1.21e-08     0s
+   8   8.95833333e-01  8.95833333e-01  1.66e-13 4.49e-16  1.47e-14     0s
+
+Barrier solved model in 8 iterations and 0.02 seconds (0.04 work units)
+Optimal objective 8.95833333e-01

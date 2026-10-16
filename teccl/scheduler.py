@@ -17,6 +17,8 @@ from teccl.topologies.dgx2 import DGX2
 from teccl.topologies.ndv2 import NDv2
 from teccl.topologies.amd import AMD
 from teccl.topologies.mesh import Mesh
+from teccl.topologies.closd import ClosD
+from teccl.topologies.closd321 import ClosD321
 from teccl.topologies.topology import Topology
 
 
@@ -28,7 +30,11 @@ class TECCLSolver(object):
 
     
     def get_topology(self, topology_params: TopologyParams) -> Topology:
-        if topology_params.name == "DGX1":
+        if topology_params.name == "ClosD":
+            return ClosD(topology_params)
+        elif topology_params.name == "ClosD321":
+            return ClosD321(topology_params)
+        elif topology_params.name == "DGX1":
             return DGX1(topology_params)
         elif topology_params.name == "DGX2":
             return DGX2(topology_params)

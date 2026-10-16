@@ -1,0 +1,1 @@
+{"input_columns": 4182, "input_nnz": 16068, "input_rows": 4512, "presolved_columns": 1740, "presolved_nnz": 12894, "presolved_norm_probe_time_sec": 0.0060255000134930015, "presolved_objective_l2_norm": 3.4641016151377544, "presolved_rhs_l2_norm": 0.408248290463863, "presolved_rows": 1386, "saved_at_unix_sec": 1792081008.48945}

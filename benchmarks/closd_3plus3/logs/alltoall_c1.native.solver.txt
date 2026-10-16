@@ -1,0 +1,70 @@
+
+Gurobi 13.0.0 (mac64[arm]) logging started Thu Oct 15 18:50:52 2026
+
+Set parameter LogFile to value "Logs/AllToAll_LP_ClosD_9-nodes_6-chunks_18-epochs_0.16666666666666666-epoch_duration_ObjectiveType.TOTAL_DEMAND_alltoall_c1.log"
+Set parameter LogToConsole to value 0
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 60
+Set parameter FeasibilityTol to value 1e-07
+Set parameter IntFeasTol to value 1e-07
+Set parameter OptimalityTol to value 1e-07
+Set parameter MIPGap to value 0
+Set parameter Crossover to value -1
+Set parameter MIPFocus to value 0
+Set parameter Method to value -1
+Set parameter Heuristics to value 0.05
+Set parameter Presolve to value -1
+Set parameter SolutionLimit to value 2000000
+Set parameter PreSOS1BigM to value 1000000
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (mac64[arm] - Darwin 27.0.0 26A434)
+
+CPU model: Apple M4
+Thread count: 10 physical cores, 10 logical processors, using up to 10 threads
+
+Non-default parameters:
+SolutionLimit  2000000
+TimeLimit  60
+FeasibilityTol  1e-07
+IntFeasTol  1e-07
+MIPGap  0
+OptimalityTol  1e-07
+LogToConsole  0
+PreSOS1BigM  1000000
+
+Optimize a model with 5223 rows, 17532 columns and 19678 nonzeros (Min)
+Model fingerprint: 0x598482e6
+Model has 54 linear objective coefficients
+Model has 18 simple general constraints
+  18 MAX
+Variable types: 17532 continuous, 0 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e-01, 1e+02]
+  Bounds range     [1e+00, 3e+01]
+  RHS range        [1e+00, 3e+01]
+Presolve removed 5035 rows and 17276 columns
+Presolve time: 0.01s
+Presolved: 188 rows, 256 columns, 699 nonzeros
+Variable types: 244 continuous, 12 integer (12 binary)
+Found heuristic solution: objective -100.0000000
+Found heuristic solution: objective -200.0000000
+
+Root relaxation: objective -1.160000e+03, 87 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -1160.0000    0    6 -200.00000 -1160.0000   480%     -    0s
+H    0     0                    -700.0000000 -1160.0000  65.7%     -    0s
+
+Cutting planes:
+  MIR: 1
+
+Explored 1 nodes (87 simplex iterations) in 0.01 seconds (0.03 work units)
+Thread count was 10 (of 10 available processors)
+
+Solution count 3: -700 -200 -100
+No other solutions better than -700
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective -7.000000000000e+02, best bound -7.000000000000e+02, gap 0.0000%

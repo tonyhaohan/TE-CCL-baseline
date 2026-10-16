@@ -1,0 +1,45 @@
+Set parameter Username
+Set parameter LicenseID to value <redacted>
+Academic license - for non-commercial use only - expires 2027-01-07
+Set parameter LogFile to value "Logs/AllToAll_LP_ClosD_9-nodes_6-chunks_18-epochs_0.16666666666666666-epoch_duration_ObjectiveType.TOTAL_DEMAND_alltoall_c1.log"
+Set parameter LogToConsole to value 0
+source =0, destination=3, consume=0.11111
+Traceback (most recent call last):
+  File "<CONDA_MATH>/bin/teccl", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "<TECCL_FORK>/teccl/__main__.py", line 21, in main
+    if handler(args, args.command):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<TECCL_FORK>/teccl/cli/solve.py", line 36, in handler
+    solver.solve()
+  File "<TECCL_FORK>/teccl/scheduler.py", line 185, in solve
+    epoch_result_schedule_solver = self.get_schedules(
+                                   ^^^^^^^^^^^^^^^^^^^
+  File "<TECCL_FORK>/teccl/scheduler.py", line 127, in get_schedules
+    schedule, schedule_json = initial_solver.get_schedule()
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<TECCL_FORK>/teccl/solvers/alltoall.py", line 637, in get_schedule
+    return self.get_flow_schedule()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<TECCL_FORK>/teccl/solvers/alltoall.py", line 579, in get_flow_schedule
+    traffic, _ = self.dig_to_source(
+                 ^^^^^^^^^^^^^^^^^^^
+  File "<TECCL_FORK>/teccl/solvers/alltoall.py", line 459, in dig_to_source
+    traffic, consumed_volume = self.dig_to_source(
+                               ^^^^^^^^^^^^^^^^^^^
+  File "<TECCL_FORK>/teccl/solvers/alltoall.py", line 459, in dig_to_source
+    traffic, consumed_volume = self.dig_to_source(
+                               ^^^^^^^^^^^^^^^^^^^
+  File "<TECCL_FORK>/teccl/solvers/alltoall.py", line 459, in dig_to_source
+    traffic, consumed_volume = self.dig_to_source(
+                               ^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 3 more times]
+  File "<TECCL_FORK>/teccl/solvers/alltoall.py", line 484, in dig_to_source
+    paths = self.account_for_consume(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<TECCL_FORK>/teccl/solvers/alltoall.py", line 411, in account_for_consume
+    assert consume == 0
+           ^^^^^^^^^^^^
+AssertionError
+ERROR conda.cli.main_run:execute(127): `conda run teccl solve --input_args benchmarks/closd_3plus3/inputs/alltoall_c1.json` failed. (See above for error)

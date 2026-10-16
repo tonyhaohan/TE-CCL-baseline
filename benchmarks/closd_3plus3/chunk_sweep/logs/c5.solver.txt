@@ -1,0 +1,84 @@
+
+Gurobi 13.0.0 (mac64[arm]) logging started Thu Oct 15 23:40:17 2026
+
+Set parameter LogFile to value "Logs/AllGather_MILP_ClosD_9-nodes_5-chunks_36-epochs_0.03333333333333333-epochduration_ObjectiveType.TOTAL_DEMAND_sweep_c5.log"
+Set parameter LogToConsole to value 0
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 60
+Set parameter FeasibilityTol to value 1e-07
+Set parameter IntFeasTol to value 1e-07
+Set parameter OptimalityTol to value 1e-07
+Set parameter MIPGap to value 0
+Set parameter Crossover to value -1
+Set parameter MIPFocus to value 0
+Set parameter Method to value -1
+Set parameter Heuristics to value 0.05
+Set parameter Presolve to value -1
+Set parameter SolutionLimit to value 2000000
+Set parameter PreSOS1BigM to value 1000000
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (mac64[arm] - Darwin 27.0.0 26A434)
+
+CPU model: Apple M4
+Thread count: 10 physical cores, 10 logical processors, using up to 4 threads
+
+Non-default parameters:
+SolutionLimit  2000000
+TimeLimit  60
+FeasibilityTol  1e-07
+IntFeasTol  1e-07
+MIPGap  0
+OptimalityTol  1e-07
+LogToConsole  0
+PreSOS1BigM  1000000
+Seed  42
+Threads  4
+
+Optimize a model with 35322 rows, 52812 columns and 119846 nonzeros (Min)
+Model fingerprint: 0xd017d98e
+Model has 36 linear objective coefficients
+Model has 9756 simple general constraints
+  9756 MAX
+Variable types: 9792 continuous, 43020 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+02, 1e+02]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 1e+02]
+Presolve removed 25346 rows and 36548 columns
+Presolve time: 0.26s
+Presolved: 9976 rows, 16264 columns, 62077 nonzeros
+Variable types: 62 continuous, 16202 integer (16201 binary)
+
+Root relaxation: objective -2.274022e+03, 34017 iterations, 4.14 seconds (8.96 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -2274.0225    0 1633          - -2274.0225      -     -    5s
+     0     0 -1000.0001    0 1595          - -1000.0001      -     -    7s
+     0     0 -1000.0001    0 1556          - -1000.0001      -     -    8s
+     0     0 -1000.0001    0 1688          - -1000.0001      -     -   10s
+     0     0 -1000.0001    0 1596          - -1000.0001      -     -   10s
+     0     0 -1000.0001    0 1652          - -1000.0001      -     -   10s
+     0     0 -1000.0001    0  707          - -1000.0001      -     -   14s
+     0     0 -1000.0001    0  951          - -1000.0001      -     -   14s
+     0     0 -1000.0001    0 1038          - -1000.0001      -     -   16s
+     0     0 -1000.0001    0  872          - -1000.0001      -     -   19s
+     0     0 -1000.0001    0  899          - -1000.0001      -     -   19s
+     0     0 -1000.0001    0  979          - -1000.0001      -     -   20s
+     0     0 -1000.0001    0  866          - -1000.0001      -     -   24s
+     0     0 -1000.0001    0  957          - -1000.0001      -     -   24s
+     0     0 -1000.0001    0 1063          - -1000.0001      -     -   25s
+     0     0 -1000.0001    0  682          - -1000.0001      -     -   28s
+     0     0 -1000.0001    0  682          - -1000.0001      -     -   28s
+     0     0 -1000.0001    0  561          - -1000.0001      -     -   31s
+H    0     0                    -1000.000000 -1000.0001  0.00%     -   33s
+
+Explored 1 nodes (260691 simplex iterations) in 36.88 seconds (76.22 work units)
+Thread count was 4 (of 10 available processors)
+
+Solution count 1: -1000
+No other solutions better than -1000
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective -1.000000000000e+03, best bound -1.000000000000e+03, gap 0.0000%

@@ -504,12 +504,16 @@ class AllGatherFormulation(BaseFormulation):
         correct_k = max(demand_met_epoch.values())
         return (list_of_sends, demand_met_epoch, buffers, correct_k)
 
-    def find_flow(self, flows: Set[Tuple[int, int, int, int, int]], s: int, d: int, c: int, k: int, flow_memoization: Dict) -> Tuple[int, int, int, int, int]:
+    def find_flow(self, flows: Set[Tuple[int, int, int, int, int]], s: int, d: int, c: int, k: int, flow_memoization: Dict, downstream_flow=None) -> Tuple[int, int, int, int, int]:
         """
             Find the flow (sending node) that causes the node d to have the chunk by epoch k.
         """
-        if (s, d, c, k) in flow_memoization:
-            return flow_memoization[(s, d, c, k)]
+        memo_key = (s, d, c, k)
+        if not self.user_input.instance.switch_copy and d in self.topology.switch_indices:
+            # 无复制交换机的不同下游发送必须消耗不同输入；同一下游路径仍可复用。
+            memo_key += (downstream_flow,)
+        if memo_key in flow_memoization:
+            return flow_memoization[memo_key]
         viable_flows = []
         # Loop over the neighbors to find such a feasible flow.
         for n in self.nodes:
@@ -529,7 +533,7 @@ class AllGatherFormulation(BaseFormulation):
         # If d is a switch, then solver can pick a solution where the switch receives the same chunk by same epoch from multiple nodes.
         #  We only need one such flow if switch is copying the chunk.
         closest_flow = min(viable_flows, key=lambda x: x[4])
-        flow_memoization[(s, d, c, k)] = closest_flow
+        flow_memoization[memo_key] = closest_flow
         if not self.user_input.instance.switch_copy and d in self.topology.switch_indices:
             # we remove the chosen flow from the set of flows so that we don't pick it again as there is no copy.
             flows.remove(closest_flow)
@@ -626,7 +630,7 @@ class AllGatherFormulation(BaseFormulation):
                     # If the sending node is a switch, then it should have received the chunk in the previous epoch.
                     k = closest_flow[4] - 1
                 closest_flow = self.find_flow(
-                    flows, s, sending_node, c, k, flow_memoization)
+                    flows, s, sending_node, c, k, flow_memoization, closest_flow)
                 required_flows.add(closest_flow)
                 my_path.append(closest_flow)
             chunk_str_path = self.chunk_flow_path_to_string(my_path)
