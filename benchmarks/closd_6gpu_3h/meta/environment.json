@@ -1,0 +1,13 @@
+{
+  "hostname": "test-X580-G30",
+  "captured_unix": 1792308968.548296,
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:09:02) [GCC 11.2.0]",
+  "conda_env": "math",
+  "packages": {
+    "gurobipy": "12.0.3",
+    "numpy": "2.3.3",
+    "scipy": "1.16.2"
+  },
+  "memory": "MemTotal:       131647708 kB\nMemFree:        13584788 kB\nMemAvailable:   112953112 kB\nBuffers:         9287040 kB\nCached:         80715628 kB\nSwapCached:        78112 kB\nActive:         86568040 kB\nInactive:       18630912 kB\nActive(anon):   13539852 kB\nInactive(anon):  1675644 kB\nActive(file):   73028188 kB\nInactive(file): 16955268 kB\nUnevictable:          16 kB\nMlocked:              16 kB\nSwapTotal:       2097148 kB\nSwapFree:         520864 kB\nDirty:             55664 kB\nWriteback:             0 kB\nAnonPages:      15119528 kB\nMapped:          1119264 kB\nShmem:             19176 kB\nKReclaimable:   10446940 kB\nSlab:           11711364 kB\nSReclaimable:   10446940 kB\nSUnreclaim:      1264424 kB\nKernelStack:       28544 kB\nPageTables:        59972 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    67921000 kB\nCommitted_AS:   23324728 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:      283592 kB\nVmallocChunk:          0 kB\nPercpu:           248832 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:   2523136 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nCmaTotal:              0 kB\nCmaFree:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    60270496 kB\nDirectMap2M:    72546304 kB\nDirectMap1G:     3145728 kB\n",
+  "source_hashes_validated": true
+}

@@ -1,0 +1,8 @@
+{
+  "TimeLimit": 10800.0,
+  "Threads": 4,
+  "Seed": 42,
+  "num_variables": 25392,
+  "horizon_epochs": 24,
+  "epoch_duration": 0.05555555555555555
+}

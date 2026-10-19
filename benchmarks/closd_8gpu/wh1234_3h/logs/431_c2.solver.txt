@@ -1,0 +1,94 @@
+
+Gurobi 12.0.3 (linux64) logging started Sun Oct 18 15:25:21 2026
+
+Set parameter LogFile to value "Logs/AllGather_MILP_ClosD431_12-nodes_2-chunks_24-epochs_0.0625-epochduration_ObjectiveType.TOTAL_DEMAND_wh1234_3h_431_c2_wh1234_3h.log"
+Set parameter LogToConsole to value 0
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 10800
+Set parameter FeasibilityTol to value 1e-07
+Set parameter IntFeasTol to value 1e-07
+Set parameter OptimalityTol to value 1e-07
+Set parameter MIPGap to value 0
+Set parameter Crossover to value -1
+Set parameter MIPFocus to value 0
+Set parameter Method to value -1
+Set parameter Heuristics to value 0.05
+Set parameter Presolve to value -1
+Set parameter SolutionLimit to value 2000000
+Set parameter PreSOS1BigM to value 1000000
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Ubuntu 20.04.6 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 5117 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 28 physical cores, 56 logical processors, using up to 4 threads
+
+Non-default parameters:
+SolutionLimit  2000000
+TimeLimit  10800
+FeasibilityTol  1e-07
+IntFeasTol  1e-07
+MIPGap  0
+OptimalityTol  1e-07
+LogToConsole  0
+PreSOS1BigM  1000000
+Seed  42
+Threads  4
+
+Optimize a model with 17176 rows, 25872 columns and 58996 nonzeros
+Model fingerprint: 0x155b8dfd
+Model has 4632 simple general constraints
+  4632 MAX
+Variable types: 4656 continuous, 21216 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+02, 1e+02]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 1e+02]
+Presolve removed 12358 rows and 18292 columns
+Presolve time: 0.18s
+Presolved: 4818 rows, 7580 columns, 28997 nonzeros
+Variable types: 38 continuous, 7542 integer (7541 binary)
+
+Root relaxation: objective -1.566964e+03, 9289 iterations, 1.39 seconds (1.04 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -1566.9643    0  657          - -1566.9643      -     -    4s
+H    0     0                    -400.0000000 -1566.9643   292%     -    4s
+     0     0 -800.00000    0  869 -400.00000 -800.00000   100%     -    5s
+     0     0 -800.00000    0  850 -400.00000 -800.00000   100%     -    6s
+     0     0 -800.00000    0  830 -400.00000 -800.00000   100%     -    7s
+     0     0 -800.00000    0  339 -400.00000 -800.00000   100%     -    9s
+     0     0 -800.00000    0  526 -400.00000 -800.00000   100%     -    9s
+     0     0 -800.00000    0  196 -400.00000 -800.00000   100%     -   12s
+     0     0 -800.00000    0  162 -400.00000 -800.00000   100%     -   12s
+H    0     0                    -600.0000000 -800.00000  33.3%     -   12s
+     0     0 -800.00000    0  116 -600.00000 -800.00000  33.3%     -   12s
+     0     0 -800.00000    0  334 -600.00000 -800.00000  33.3%     -   13s
+     0     0 -800.00000    0  130 -600.00000 -800.00000  33.3%     -   13s
+     0     0 -800.00000    0  126 -600.00000 -800.00000  33.3%     -   13s
+     0     0 -800.00000    0   99 -600.00000 -800.00000  33.3%     -   14s
+     0     0 -800.00000    0   98 -600.00000 -800.00000  33.3%     -   14s
+     0     0 -800.00000    0  121 -600.00000 -800.00000  33.3%     -   14s
+     0     0 -800.00000    0  110 -600.00000 -800.00000  33.3%     -   15s
+     0     2 -800.00000    0  110 -600.00000 -800.00000  33.3%     -   15s
+H   47    76                    -700.0000000 -800.00000  14.3%   699   21s
+H   63    76                    -800.0000000 -800.00000  0.00%   740   21s
+
+Cutting planes:
+  Gomory: 2
+  Cover: 1
+  Clique: 83
+  MIR: 19
+  Zero half: 39
+  RLT: 36
+  Relax-and-lift: 3
+
+Explored 78 nodes (160670 simplex iterations) in 21.35 seconds (17.73 work units)
+Thread count was 4 (of 56 available processors)
+
+Solution count 4: -800 -700 -600 -400
+No other solutions better than -800
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective -8.000000000000e+02, best bound -8.000000000000e+02, gap 0.0000%

@@ -1,0 +1,511 @@
+{
+  "upstream_revision": "c128bf241e5b8bf6ce816b2fe5b8000baacb7c44",
+  "fork_base_revision": "8fea331c6d89b9472c106ef64beec2fa478f57ee",
+  "mcnf_revision": "8bbd3aea627f2fe11ee94d3e57cc493de1bce42d",
+  "topologies": {
+    "44": {
+      "canonical_mcnf_config": {
+        "type": "closd",
+        "params": {
+          "gpu_groups": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "logical_gpu_groups": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "gpus_per_node": 4,
+          "n_planes": 1,
+          "high_switches_per_plane": 1,
+          "gpu_low_bandwidth": 1.0,
+          "low_high_bandwidth": 1.0,
+          "scale_low_high_by_group_size": false
+        }
+      },
+      "mcnf_config": {
+        "type": "closd",
+        "params": {
+          "gpu_groups": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "logical_gpu_groups": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "gpus_per_node": 4,
+          "n_planes": 1,
+          "high_switches_per_plane": 1,
+          "gpu_low_bandwidth": 1.0,
+          "low_high_bandwidth": 1.0,
+          "scale_low_high_by_group_size": false
+        }
+      },
+      "canonical_to_compact": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10
+      },
+      "directed_edges": [
+        [
+          0,
+          8
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          9
+        ]
+      ],
+      "bandwidths": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "physical_groups": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "logical_groups": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "validated": true
+    },
+    "431": {
+      "canonical_mcnf_config": {
+        "type": "closd",
+        "params": {
+          "gpu_groups": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6
+            ],
+            [
+              8
+            ]
+          ],
+          "logical_gpu_groups": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              8
+            ]
+          ],
+          "gpus_per_node": 4,
+          "n_planes": 1,
+          "high_switches_per_plane": 1,
+          "gpu_low_bandwidth": 1.0,
+          "low_high_bandwidth": 1.0,
+          "scale_low_high_by_group_size": false
+        }
+      },
+      "mcnf_config": {
+        "type": "closd",
+        "params": {
+          "gpu_groups": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6
+            ],
+            [
+              7
+            ]
+          ],
+          "logical_gpu_groups": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "gpus_per_node": 4,
+          "n_planes": 1,
+          "high_switches_per_plane": 1,
+          "gpu_low_bandwidth": 1.0,
+          "low_high_bandwidth": 1.0,
+          "scale_low_high_by_group_size": false
+        }
+      },
+      "canonical_to_compact": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "8": 7,
+        "9": 8,
+        "10": 9,
+        "11": 10,
+        "12": 11
+      },
+      "directed_edges": [
+        [
+          0,
+          8
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          10
+        ]
+      ],
+      "bandwidths": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "physical_groups": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "logical_groups": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "validated": true
+    }
+  },
+  "matrix": {
+    "shapes": [
+      "44",
+      "431"
+    ],
+    "chunks": [
+      1,
+      2,
+      3,
+      5,
+      10
+    ],
+    "gurobi_time_limit_hours": 3,
+    "gurobi_time_limit_sec": 10800,
+    "process_wall_limit_sec": 11400,
+    "process_rss_limit_gib": 16,
+    "threads": 4,
+    "seed": 42,
+    "horizon": "8*c+8",
+    "vector_bytes_per_gpu": 250000,
+    "chunk_bytes": "250000/(8*c)",
+    "link_Gbps": 400,
+    "startup_us_per_active_epoch": 0.1,
+    "allreduce": "2*complete AllGather time"
+  },
+  "source_sha256": {
+    "teccl/topologies/closd8.py": "6c97c0602b9016a833d16a33611b32aaa01139484fc54e488ed32f8bcd489bc0",
+    "teccl/scheduler.py": "c79f7c6138e6a9cea7ed2ffdb121ca2513f589126045367b6ce6eeed5ead0929",
+    "teccl/solvers/allgather.py": "4b6312171f0fcf221c4799a880ecd8b6bd38ee1777525851439dc51f274385d6",
+    "teccl/solvers/base_formulation.py": "4240496b844a8c7f6abc86b65cdc9aca20322a6e52382f6d027a7c0fe003ccee",
+    "teccl/input_data.py": "2591e83139f25b70d81813cdbfc4b878385b39c2a76ebfd021ca8b075a28c890",
+    "benchmarks/closd_8gpu/run.py": "6d4878bc91fc91bf121dee6542589e999bbffe7834a536bc89b207b4e6b5475f",
+    "benchmarks/closd_8gpu/check.py": "b59cbd597e0dc91e639efe2e7f323bb759d36ce733e2afadfd78faac1fbb6798",
+    "benchmarks/closd_8gpu/report.py": "6f6d90d65dd3c593a24ab9cef54e7031c2da0e56763373625d987b6ca92a694e"
+  }
+}

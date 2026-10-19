@@ -1,0 +1,23 @@
+{
+  "host": "WH1234",
+  "session": "teccl277_8gpu_3h_20261018",
+  "launched_unix": 1792308281.7163913,
+  "workspace": "~/mcnf-runs/issue277_teccl_8gpu_3h_20261018",
+  "launch_script": "meta/launch.sh",
+  "solver_time_limit_sec": 10800,
+  "process_wall_limit_sec": 11400,
+  "process_rss_limit_gib": 16,
+  "threads": 4,
+  "seed": 42,
+  "source_sha256": {
+    "teccl/topologies/closd8.py": "6c97c0602b9016a833d16a33611b32aaa01139484fc54e488ed32f8bcd489bc0",
+    "teccl/scheduler.py": "c79f7c6138e6a9cea7ed2ffdb121ca2513f589126045367b6ce6eeed5ead0929",
+    "teccl/solvers/allgather.py": "4b6312171f0fcf221c4799a880ecd8b6bd38ee1777525851439dc51f274385d6",
+    "teccl/solvers/base_formulation.py": "4240496b844a8c7f6abc86b65cdc9aca20322a6e52382f6d027a7c0fe003ccee",
+    "teccl/input_data.py": "2591e83139f25b70d81813cdbfc4b878385b39c2a76ebfd021ca8b075a28c890",
+    "benchmarks/closd_8gpu/run.py": "6d4878bc91fc91bf121dee6542589e999bbffe7834a536bc89b207b4e6b5475f",
+    "benchmarks/closd_8gpu/check.py": "b59cbd597e0dc91e639efe2e7f323bb759d36ce733e2afadfd78faac1fbb6798",
+    "benchmarks/closd_8gpu/report.py": "6f6d90d65dd3c593a24ab9cef54e7031c2da0e56763373625d987b6ca92a694e"
+  },
+  "smoke_validated": true
+}

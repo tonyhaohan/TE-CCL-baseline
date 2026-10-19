@@ -1,0 +1,52 @@
+
+Gurobi 12.0.3 (linux64) logging started Sun Oct 18 15:24:43 2026
+
+Set parameter LogFile to value "benchmarks/closd_8gpu/wh1234_3h/logs/mcnf/issue277_8gpu_44_mcnf_allgather_t12_main.log"
+Set parameter OutputFlag to value 1
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Ubuntu 20.04.6 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 5117 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 28 physical cores, 56 logical processors, using up to 4 threads
+
+Non-default parameters:
+TimeLimit  10800
+FeasibilityTol  1e-08
+OptimalityTol  1e-08
+Method  2
+BarConvTol  1e-10
+Crossover  0
+LogToConsole  0
+Threads  4
+
+Optimize a model with 9218 rows, 8706 columns and 31560 nonzeros
+Model fingerprint: 0xffa0b7e5
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e-01, 1e-01]
+Presolve removed 6366 rows and 5100 columns
+Presolve time: 0.03s
+Presolved: 2852 rows, 3606 columns, 25638 nonzeros
+Ordering time: 0.04s
+
+Barrier statistics:
+ AA' NZ     : 8.594e+04
+ Factor NZ  : 2.610e+05 (roughly 5 MB of memory)
+ Factor Ops : 2.960e+07 (less than 1 second per iteration)
+ Threads    : 4
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   2.02527450e+00  0.00000000e+00  4.30e+00 0.00e+00  1.05e-02     0s
+   1   1.61373079e+00 -6.99624889e-01  1.24e+00 2.46e-02  3.15e-03     0s
+   2   1.16906862e+00 -5.50557511e-01  2.62e-01 1.11e-16  7.61e-04     0s
+   3   9.09795695e-01  2.03140785e-01  1.38e-02 4.44e-16  1.35e-04     0s
+   4   8.80585921e-01  8.14836811e-01  1.21e-03 2.22e-16  1.11e-05     0s
+   5   8.75070149e-01  8.74492640e-01  1.04e-05 2.22e-16  9.63e-08     0s
+   6   8.75000074e-01  8.74999493e-01  6.25e-10 5.15e-16  9.65e-11     0s
+   7   8.75000000e-01  8.74999999e-01  2.03e-11 1.88e-16  9.65e-14     0s
+   8   8.75000000e-01  8.75000000e-01  2.66e-13 5.01e-16  9.65e-17     0s
+
+Barrier solved model in 8 iterations and 0.15 seconds (0.08 work units)
+Optimal objective 8.75000000e-01

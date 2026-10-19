@@ -1,0 +1,290 @@
+{
+  "artifact_id": "20261018_153721_446282_issue277_6gpu_3h_321_mcnf_allgather_t12_nogit",
+  "artifact_root": "benchmarks/closd_6gpu_3h/wh1234_3h/mcnf_artifacts",
+  "artifact_storage": "primary",
+  "config": {
+    "comm": {
+      "patterns": [
+        {
+          "name": "single_layer",
+          "params": {}
+        },
+        {
+          "name": "tree_tree",
+          "params": {
+            "method": "node"
+          }
+        },
+        {
+          "name": "knomial",
+          "params": {
+            "radix": 4
+          }
+        },
+        {
+          "name": "hd",
+          "params": {}
+        },
+        {
+          "name": "tree_ring",
+          "params": {
+            "method": "node"
+          }
+        },
+        {
+          "name": "nhr",
+          "params": {}
+        }
+      ]
+    },
+    "crossover": {
+      "method": "none"
+    },
+    "modeling": {
+      "family": "node_arc",
+      "params": {
+        "beta": 1.0,
+        "time_steps": 12
+      }
+    },
+    "network": {
+      "params": {
+        "gpu_groups": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5
+          ]
+        ],
+        "gpu_low_bandwidth": 1.0,
+        "gpus_per_node": 3,
+        "high_switches_per_plane": 1,
+        "logical_gpu_groups": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ]
+        ],
+        "low_high_bandwidth": 1.0,
+        "n_planes": 1,
+        "scale_low_high_by_group_size": false
+      },
+      "type": "closd"
+    },
+    "pareto": {
+      "method": "none"
+    },
+    "presolve": {
+      "name": "none"
+    },
+    "run": {
+      "artifact": true,
+      "artifact_dir": "benchmarks/closd_6gpu_3h/wh1234_3h/mcnf_artifacts",
+      "artifact_fallback_dir": "benchmarks/closd_6gpu_3h/wh1234_3h/mcnf_artifacts",
+      "artifact_id": "20261018_153721_446282_issue277_6gpu_3h_321_mcnf_allgather_t12_nogit",
+      "artifact_include_z": true,
+      "name": "issue277_6gpu_3h_321_mcnf_allgather_t12",
+      "save": false,
+      "solver_log": true,
+      "solver_log_dir": "benchmarks/closd_6gpu_3h/wh1234_3h/logs/mcnf",
+      "solver_log_to_console": false
+    },
+    "solver": {
+      "name": "gurobi_native",
+      "solver_args": {
+        "BarConvTol": 1e-10,
+        "Crossover": 0,
+        "FeasibilityTol": 1e-08,
+        "Method": 2,
+        "OptimalityTol": 1e-08,
+        "Threads": 4,
+        "TimeLimit": 10800
+      }
+    },
+    "solver_backend": {},
+    "squeeze": {
+      "method": "none"
+    },
+    "stages": {
+      "crossover": {
+        "backend": {
+          "name": "gurobi_native",
+          "solver_args": {
+            "BarConvTol": 1e-10,
+            "Crossover": 0,
+            "FeasibilityTol": 1e-08,
+            "Method": 2,
+            "OptimalityTol": 1e-08,
+            "Threads": 4,
+            "TimeLimit": 10800
+          }
+        },
+        "presolve": {
+          "name": "none"
+        }
+      },
+      "main": {
+        "backend": {
+          "name": "gurobi_native",
+          "solver_args": {
+            "BarConvTol": 1e-10,
+            "Crossover": 0,
+            "FeasibilityTol": 1e-08,
+            "Method": 2,
+            "OptimalityTol": 1e-08,
+            "Threads": 4,
+            "TimeLimit": 10800
+          }
+        },
+        "presolve": {
+          "name": "none"
+        }
+      },
+      "pareto": {
+        "backend": {
+          "name": "gurobi_native",
+          "solver_args": {
+            "BarConvTol": 1e-10,
+            "Crossover": 0,
+            "FeasibilityTol": 1e-08,
+            "Method": 2,
+            "OptimalityTol": 1e-08,
+            "Threads": 4,
+            "TimeLimit": 10800
+          }
+        },
+        "presolve": {
+          "name": "none"
+        }
+      },
+      "squeeze": {
+        "backend": {
+          "name": "gurobi_native",
+          "solver_args": {
+            "BarConvTol": 1e-10,
+            "Crossover": 0,
+            "FeasibilityTol": 1e-08,
+            "Method": 2,
+            "OptimalityTol": 1e-08,
+            "Threads": 4,
+            "TimeLimit": 10800
+          }
+        },
+        "presolve": {
+          "name": "none"
+        }
+      }
+    },
+    "task": {
+      "mix": [
+        {
+          "params": {
+            "data_volume": 0.16666666666666666,
+            "root": 0
+          },
+          "type": "broadcast"
+        },
+        {
+          "params": {
+            "data_volume": 0.16666666666666666,
+            "root": 1
+          },
+          "type": "broadcast"
+        },
+        {
+          "params": {
+            "data_volume": 0.16666666666666666,
+            "root": 2
+          },
+          "type": "broadcast"
+        },
+        {
+          "params": {
+            "data_volume": 0.16666666666666666,
+            "root": 3
+          },
+          "type": "broadcast"
+        },
+        {
+          "params": {
+            "data_volume": 0.16666666666666666,
+            "root": 4
+          },
+          "type": "broadcast"
+        },
+        {
+          "params": {
+            "data_volume": 0.16666666666666666,
+            "root": 5
+          },
+          "type": "broadcast"
+        }
+      ],
+      "type": "mixed"
+    }
+  },
+  "config_file": null,
+  "created_at": "2026-10-18T15:37:21+08:00",
+  "fallback_reason": null,
+  "generation_rng": "numpy.default_rng",
+  "git_branch": "unknown-branch",
+  "git_commit": null,
+  "hostname": "test-X580-G30",
+  "include_stage_z": false,
+  "include_z": true,
+  "npz": "solution.npz",
+  "overrides": [],
+  "schema": "mcnf_tree.artifact.v1",
+  "script": null,
+  "solution": {
+    "backend": "gurobi_native",
+    "objective": 0.8958333333333727,
+    "solve_time": 0.17910748906433582,
+    "solver_stats": {
+      "build_time": 0.022677158005535603,
+      "gpu_memory_mb_peak": null,
+      "gpu_memory_monitor_enabled": true,
+      "gpu_memory_sample_count": 0,
+      "gurobi_bar_iter_count": 9,
+      "gurobi_iter_count": 0.0,
+      "gurobi_max_mem_used_gb": 0.007864096,
+      "gurobi_native_overhead_time": 0.0831726212054491,
+      "gurobi_native_wall_time": 0.17910748906433582,
+      "gurobi_num_constrs": 4512,
+      "gurobi_num_nz": 16068,
+      "gurobi_num_vars": 4182,
+      "gurobi_pdhg_iter_count": 0.0,
+      "gurobi_sol_count": 1,
+      "gurobi_status_code": 2,
+      "gurobi_work": 0.03816929942395916,
+      "objective_l2_norm": 3.4641016151377544,
+      "presolved_columns": 1740,
+      "presolved_nnz": 12894,
+      "presolved_norm_probe_time_sec": 0.026677056215703487,
+      "presolved_objective_l2_norm": 3.4641016151377544,
+      "presolved_rhs_l2_norm": 0.408248290463863,
+      "presolved_rows": 1386,
+      "rhs_l2_norm": 0.408248290463863,
+      "setup_time": 0.03511227807030082,
+      "solve_time": 0.09593486785888672
+    },
+    "status": "optimal",
+    "time_steps": 12,
+    "total_variables": 4182
+  },
+  "stage_artifacts": [],
+  "title": "issue277_6gpu_3h_321_mcnf_allgather_t12"
+}

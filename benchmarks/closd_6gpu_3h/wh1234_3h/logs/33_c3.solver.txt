@@ -1,0 +1,81 @@
+
+Gurobi 12.0.3 (linux64) logging started Sun Oct 18 15:37:39 2026
+
+Set parameter LogFile to value "Logs/AllGather_MILP_ClosD_9-nodes_3-chunks_24-epochs_0.05555555555555555-epochduration_ObjectiveType.TOTAL_DEMAND_wh1234_3h_33_c3_wh1234_3h.log"
+Set parameter LogToConsole to value 0
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 10800
+Set parameter FeasibilityTol to value 1e-07
+Set parameter IntFeasTol to value 1e-07
+Set parameter OptimalityTol to value 1e-07
+Set parameter MIPGap to value 0
+Set parameter Crossover to value -1
+Set parameter MIPFocus to value 0
+Set parameter Method to value -1
+Set parameter Heuristics to value 0.05
+Set parameter Presolve to value -1
+Set parameter SolutionLimit to value 2000000
+Set parameter PreSOS1BigM to value 1000000
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Ubuntu 20.04.6 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 5117 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 28 physical cores, 56 logical processors, using up to 4 threads
+
+Non-default parameters:
+SolutionLimit  2000000
+TimeLimit  10800
+FeasibilityTol  1e-07
+IntFeasTol  1e-07
+MIPGap  0
+OptimalityTol  1e-07
+LogToConsole  0
+PreSOS1BigM  1000000
+Seed  42
+Threads  4
+
+Optimize a model with 14322 rows, 21144 columns and 47826 nonzeros
+Model fingerprint: 0xbbd9bbc5
+Model has 3912 simple general constraints
+  3912 MAX
+Variable types: 3936 continuous, 17208 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+02, 1e+02]
+  Bounds range     [1e+00, 9e+01]
+  RHS range        [1e+00, 9e+01]
+Presolve removed 10394 rows and 14984 columns
+Presolve time: 0.20s
+Presolved: 3928 rows, 6160 columns, 23425 nonzeros
+Variable types: 38 continuous, 6122 integer (6121 binary)
+
+Root relaxation: objective -1.547692e+03, 7340 iterations, 0.97 seconds (0.64 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -1547.6923    0  588          - -1547.6923      -     -    2s
+H    0     0                    -100.0000000 -1547.6923  1448%     -    3s
+     0     0 -800.00000    0  656 -100.00000 -800.00000   700%     -    5s
+     0     0 -800.00000    0  746 -100.00000 -800.00000   700%     -    5s
+     0     0 -800.00000    0  712 -100.00000 -800.00000   700%     -    5s
+     0     0 -800.00000    0   75 -100.00000 -800.00000   700%     -    7s
+     0     0 -800.00000    0   90 -100.00000 -800.00000   700%     -    7s
+H    0     0                    -700.0000000 -800.00000  14.3%     -    7s
+     0     0 -800.00000    0   28 -700.00000 -800.00000  14.3%     -    7s
+H    0     0                    -800.0000000 -800.00000  0.00%     -    7s
+     0     0 -800.00000    0   28 -800.00000 -800.00000  0.00%     -    7s
+
+Cutting planes:
+  Gomory: 5
+  MIR: 38
+  Zero half: 29
+  RLT: 38
+
+Explored 1 nodes (48761 simplex iterations) in 7.95 seconds (4.91 work units)
+Thread count was 4 (of 56 available processors)
+
+Solution count 3: -800 -700 -100
+No other solutions better than -800
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective -8.000000000000e+02, best bound -8.000000000000e+02, gap 0.0000%

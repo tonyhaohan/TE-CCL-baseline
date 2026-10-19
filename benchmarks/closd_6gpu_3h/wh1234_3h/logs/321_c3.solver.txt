@@ -1,0 +1,94 @@
+
+Gurobi 12.0.3 (linux64) logging started Sun Oct 18 15:37:49 2026
+
+Set parameter LogFile to value "Logs/AllGather_MILP_ClosD321_10-nodes_3-chunks_24-epochs_0.05555555555555555-epochduration_ObjectiveType.TOTAL_DEMAND_wh1234_3h_321_c3_wh1234_3h.log"
+Set parameter LogToConsole to value 0
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 10800
+Set parameter FeasibilityTol to value 1e-07
+Set parameter IntFeasTol to value 1e-07
+Set parameter OptimalityTol to value 1e-07
+Set parameter MIPGap to value 0
+Set parameter Crossover to value -1
+Set parameter MIPFocus to value 0
+Set parameter Method to value -1
+Set parameter Heuristics to value 0.05
+Set parameter Presolve to value -1
+Set parameter SolutionLimit to value 2000000
+Set parameter PreSOS1BigM to value 1000000
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Ubuntu 20.04.6 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 5117 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 28 physical cores, 56 logical processors, using up to 4 threads
+
+Non-default parameters:
+SolutionLimit  2000000
+TimeLimit  10800
+FeasibilityTol  1e-07
+IntFeasTol  1e-07
+MIPGap  0
+OptimalityTol  1e-07
+LogToConsole  0
+PreSOS1BigM  1000000
+Seed  42
+Threads  4
+
+Optimize a model with 17106 rows, 25392 columns and 57282 nonzeros
+Model fingerprint: 0xf54568de
+Model has 4344 simple general constraints
+  4344 MAX
+Variable types: 4368 continuous, 21024 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+02, 1e+02]
+  Bounds range     [1e+00, 9e+01]
+  RHS range        [1e+00, 9e+01]
+Presolve removed 12832 rows and 18606 columns
+Presolve time: 0.19s
+Presolved: 4274 rows, 6786 columns, 25277 nonzeros
+Variable types: 38 continuous, 6748 integer (6747 binary)
+
+Root relaxation: objective -1.505556e+03, 7734 iterations, 1.18 seconds (0.73 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -1505.5556    0  477          - -1505.5556      -     -    3s
+H    0     0                    -100.0000000 -1505.5556  1406%     -    3s
+     0     0 -700.00010    0  715 -100.00000 -700.00010   600%     -    4s
+     0     0 -700.00000    0  693 -100.00000 -700.00000   600%     -    4s
+     0     0 -700.00000    0  794 -100.00000 -700.00000   600%     -    5s
+     0     0 -700.00000    0  757 -100.00000 -700.00000   600%     -    5s
+     0     0 -700.00000    0  129 -100.00000 -700.00000   600%     -    7s
+H    0     0                    -300.0000000 -700.00000   133%     -    7s
+     0     0 -700.00000    0  136 -300.00000 -700.00000   133%     -    7s
+     0     0 -700.00000    0  237 -300.00000 -700.00000   133%     -    8s
+     0     0 -700.00000    0  208 -300.00000 -700.00000   133%     -    8s
+     0     0 -700.00000    0  281 -300.00000 -700.00000   133%     -   10s
+     0     0 -700.00000    0  229 -300.00000 -700.00000   133%     -   10s
+     0     0 -700.00000    0  133 -300.00000 -700.00000   133%     -   11s
+     0     0 -700.00000    0  106 -300.00000 -700.00000   133%     -   11s
+H    0     0                    -400.0000000 -700.00000  75.0%     -   11s
+     0     2 -700.00000    0  106 -400.00000 -700.00000  75.0%     -   12s
+H   28    31                    -500.0000000 -700.00000  40.0%   629   14s
+    42    53 -700.00000    6  269 -500.00000 -700.00000  40.0%   580   15s
+H   59    77                    -600.0000000 -700.00000  16.7%   730   15s
+H   77    77                    -700.0000989 -700.00010  0.00%   616   15s
+
+Cutting planes:
+  Gomory: 8
+  Clique: 75
+  MIR: 39
+  Zero half: 42
+  RLT: 27
+
+Explored 83 nodes (127265 simplex iterations) in 15.89 seconds (11.57 work units)
+Thread count was 4 (of 56 available processors)
+
+Solution count 6: -700 -600 -500 ... -100
+No other solutions better than -700
+
+Optimal solution found (tolerance 0.00e+00)
+Warning: max constraint violation (9.8889e-07) exceeds tolerance
+Warning: max general constraint violation (9.8889e-07) exceeds tolerance
+Best objective -7.000000988889e+02, best bound -7.000000988889e+02, gap 0.0000%

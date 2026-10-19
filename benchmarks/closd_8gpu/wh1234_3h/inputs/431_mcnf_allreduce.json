@@ -1,0 +1,95 @@
+{
+  "network": {
+    "type": "closd",
+    "params": {
+      "gpu_groups": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          7
+        ]
+      ],
+      "logical_gpu_groups": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "gpus_per_node": 4,
+      "n_planes": 1,
+      "high_switches_per_plane": 1,
+      "gpu_low_bandwidth": 1.0,
+      "low_high_bandwidth": 1.0,
+      "scale_low_high_by_group_size": false
+    }
+  },
+  "task": {
+    "type": "allreduce",
+    "params": {
+      "group_size": 8,
+      "data_volume": 0.125
+    }
+  },
+  "comm": {
+    "name": "hwc"
+  },
+  "modeling": {
+    "family": "node_arc",
+    "params": {
+      "time_steps": 12,
+      "beta": 1.0
+    }
+  },
+  "solver": {
+    "name": "gurobi_native",
+    "solver_args": {
+      "Method": 2,
+      "Crossover": 0,
+      "Threads": 4,
+      "TimeLimit": 10800,
+      "FeasibilityTol": 1e-08,
+      "OptimalityTol": 1e-08,
+      "BarConvTol": 1e-10
+    }
+  },
+  "presolve": {
+    "name": "none"
+  },
+  "squeeze": {
+    "method": "none"
+  },
+  "crossover": {
+    "method": "none"
+  },
+  "pareto": {
+    "method": "none"
+  },
+  "run": {
+    "name": "issue277_8gpu_431_mcnf_allreduce_t12",
+    "artifact": true,
+    "artifact_include_z": true,
+    "artifact_dir": "benchmarks/closd_8gpu/wh1234_3h/mcnf_artifacts",
+    "artifact_fallback_dir": "benchmarks/closd_8gpu/wh1234_3h/mcnf_artifacts",
+    "solver_log": true,
+    "solver_log_dir": "benchmarks/closd_8gpu/wh1234_3h/logs/mcnf",
+    "solver_log_to_console": false,
+    "save": false
+  }
+}

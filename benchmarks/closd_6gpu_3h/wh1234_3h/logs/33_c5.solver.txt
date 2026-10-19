@@ -1,0 +1,90 @@
+
+Gurobi 12.0.3 (linux64) logging started Sun Oct 18 15:38:08 2026
+
+Set parameter LogFile to value "Logs/AllGather_MILP_ClosD_9-nodes_5-chunks_36-epochs_0.03333333333333333-epochduration_ObjectiveType.TOTAL_DEMAND_wh1234_3h_33_c5_wh1234_3h.log"
+Set parameter LogToConsole to value 0
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 10800
+Set parameter FeasibilityTol to value 1e-07
+Set parameter IntFeasTol to value 1e-07
+Set parameter OptimalityTol to value 1e-07
+Set parameter MIPGap to value 0
+Set parameter Crossover to value -1
+Set parameter MIPFocus to value 0
+Set parameter Method to value -1
+Set parameter Heuristics to value 0.05
+Set parameter Presolve to value -1
+Set parameter SolutionLimit to value 2000000
+Set parameter PreSOS1BigM to value 1000000
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Ubuntu 20.04.6 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 5117 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 28 physical cores, 56 logical processors, using up to 4 threads
+
+Non-default parameters:
+SolutionLimit  2000000
+TimeLimit  10800
+FeasibilityTol  1e-07
+IntFeasTol  1e-07
+MIPGap  0
+OptimalityTol  1e-07
+LogToConsole  0
+PreSOS1BigM  1000000
+Seed  42
+Threads  4
+
+Optimize a model with 35322 rows, 52812 columns and 119846 nonzeros
+Model fingerprint: 0xd017d98e
+Model has 9756 simple general constraints
+  9756 MAX
+Variable types: 9792 continuous, 43020 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+02, 1e+02]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 1e+02]
+Presolve removed 25346 rows and 36548 columns
+Presolve time: 0.37s
+Presolved: 9976 rows, 16264 columns, 62077 nonzeros
+Variable types: 62 continuous, 16202 integer (16201 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   17881   -2.2759986e+03   1.204535e+03   0.000000e+00      5s
+   27363   -2.2746861e+03   4.172583e+03   0.000000e+00     10s
+   30777   -2.2740225e+03   0.000000e+00   0.000000e+00     12s
+
+Root relaxation: objective -2.274022e+03, 30777 iterations, 11.72 seconds (8.44 work units)
+Total elapsed time = 16.04s (DegenMoves)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -2274.0225    0 1374          - -2274.0225      -     -   20s
+     0     0 -1000.0001    0 1633          - -1000.0001      -     -   26s
+     0     0 -1000.0001    0 1594          - -1000.0001      -     -   26s
+     0     0 -1000.0001    0 1632          - -1000.0001      -     -   31s
+     0     0 -1000.0001    0 1617          - -1000.0001      -     -   31s
+     0     0 -1000.0001    0  563          - -1000.0001      -     -   49s
+     0     0 -1000.0001    0  583          - -1000.0001      -     -   49s
+H    0     0                    -1000.000099 -1000.0001  0.00%     -   61s
+     0     0 -1000.0001    0  406 -1000.0001 -1000.0001  0.00%     -   61s
+
+Cutting planes:
+  Gomory: 6
+  Cover: 1
+  MIR: 79
+  Zero half: 95
+  RLT: 125
+
+Explored 1 nodes (184657 simplex iterations) in 61.59 seconds (43.03 work units)
+Thread count was 4 (of 56 available processors)
+
+Solution count 1: -1000
+No other solutions better than -1000
+
+Optimal solution found (tolerance 0.00e+00)
+Warning: max constraint violation (9.9167e-07) exceeds tolerance
+Warning: max general constraint violation (9.9167e-07) exceeds tolerance
+Best objective -1.000000099167e+03, best bound -1.000000099167e+03, gap 0.0000%

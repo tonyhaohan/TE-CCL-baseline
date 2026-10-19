@@ -1,0 +1,52 @@
+{
+  "host": "WH1234",
+  "session": "teccl277_6gpu_3h_20261018",
+  "launched_unix": 1792309035.6772747,
+  "workspace": "~/mcnf-runs/issue277_teccl_6gpu_3h_20261018",
+  "launch_script": "meta/launch.sh",
+  "matrix": {
+    "chunks": {
+      "33": [
+        1,
+        2,
+        3,
+        5,
+        10,
+        15,
+        20
+      ],
+      "321": [
+        1,
+        2,
+        3,
+        5,
+        10
+      ]
+    },
+    "solver_time_limit_sec": 10800,
+    "process_wall_limit_sec": 11400,
+    "rss_limit_gib": 16,
+    "threads": 4,
+    "seed": 42,
+    "vector_bytes": 250000,
+    "chunk_bytes": "250000/(6c)",
+    "link_Gbps": 400,
+    "startup_us_per_active_epoch": 0.1,
+    "allreduce": "2 * complete AG"
+  },
+  "source_sha256": {
+    "teccl/topologies/closd.py": "bd86c045334ab7544d4695f55f66a46bef8a78e575a14fa2b6af9c9d4d93abd8",
+    "teccl/topologies/closd321.py": "19354170860a40077e0d96e35f4fbf6693aa2bcd35d2e1bcab59bb6e6fa425d4",
+    "teccl/scheduler.py": "c79f7c6138e6a9cea7ed2ffdb121ca2513f589126045367b6ce6eeed5ead0929",
+    "teccl/solvers/allgather.py": "4b6312171f0fcf221c4799a880ecd8b6bd38ee1777525851439dc51f274385d6",
+    "teccl/solvers/base_formulation.py": "4240496b844a8c7f6abc86b65cdc9aca20322a6e52382f6d027a7c0fe003ccee",
+    "teccl/input_data.py": "2591e83139f25b70d81813cdbfc4b878385b39c2a76ebfd021ca8b075a28c890",
+    "benchmarks/closd_6gpu_3h/run.py": "191f30d633b925f6445dcb8deeeac64a0842111a85d609d18416cd81ee0515bd",
+    "benchmarks/closd_6gpu_3h/report.py": "e5a89a8c535baa4e348c89ae339fec154823f7e485dd0478be9235115813d86a",
+    "benchmarks/closd_3plus3/check_allgather.py": "6b5fb6bc7e5e3357becd5f9e0cc224c8475261c02b3595451ad65be03421adf9",
+    "benchmarks/closd_3plus2plus1/check_allgather.py": "c25fc68312b52fd9e97be441442555b333d575bef99ecd3e81d1fcb4caaa7906",
+    "benchmarks/closd_6gpu_3h/check.py": "e5a946dd82673b0e066675434db8d046ca05541821478e0ff4f85fe51ae17392"
+  },
+  "smoke_validated": true,
+  "coexisting_queue": "teccl277_8gpu_3h_20261018"
+}

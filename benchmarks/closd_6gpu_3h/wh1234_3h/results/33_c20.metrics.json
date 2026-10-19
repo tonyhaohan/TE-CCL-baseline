@@ -1,0 +1,10 @@
+{
+  "engine": "QUEUE",
+  "case": "33_c20",
+  "shape": "33",
+  "chunks": 20,
+  "status": "SKIPPED_SCOPE",
+  "validated": false,
+  "scope_included": false,
+  "reason": "User capped this rerun at 10 chunks; no MILP constructed or optimized"
+}

@@ -1,0 +1,21 @@
+{
+  "engine": "TECCL",
+  "case": "431_c10",
+  "shape": "431",
+  "chunks": 10,
+  "status": "TIME_LIMIT",
+  "native_status_code": 9,
+  "solution_count": 0,
+  "time_limit_sec": 10800.0,
+  "optimizer_sec": 10800.972203016281,
+  "encode_wall_sec": 10812.049619663972,
+  "num_variables": 473616,
+  "linear_constraints": 305304,
+  "general_constraints": 84568,
+  "nonzeros": 1087268,
+  "horizon_epochs": 88,
+  "objective_bound": -1600.0,
+  "validated": false,
+  "worker_sec": 10812.049793077167,
+  "peak_rss_mib": 6895.26953125
+}

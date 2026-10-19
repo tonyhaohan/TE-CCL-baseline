@@ -19,6 +19,7 @@ from teccl.topologies.amd import AMD
 from teccl.topologies.mesh import Mesh
 from teccl.topologies.closd import ClosD
 from teccl.topologies.closd321 import ClosD321
+from teccl.topologies.closd8 import ClosD8
 from teccl.topologies.topology import Topology
 
 
@@ -34,6 +35,8 @@ class TECCLSolver(object):
             return ClosD(topology_params)
         elif topology_params.name == "ClosD321":
             return ClosD321(topology_params)
+        elif topology_params.name in ("ClosD44", "ClosD431"):
+            return ClosD8(topology_params)
         elif topology_params.name == "DGX1":
             return DGX1(topology_params)
         elif topology_params.name == "DGX2":

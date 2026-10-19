@@ -1,5 +1,7 @@
 # TECCL / MCNF ClosD baselines
 
+[WH1234 三小时最终结果](wh1234_final/comparison.md)：四拓扑各 1/2/3/5/10 块，共20项；16最优、2超时可行上界、2三小时无 incumbent。旧 Mac 六卡结果保留作历史对照。
+
 - [3+3 正常拓扑](closd_3plus3/README.md)：每来源 1/2/3/5/10/15/20 块。
 - [3+2+1 坏卡替换拓扑](closd_3plus2plus1/README.md)：每来源 1/2/3/5/10 块。
 
